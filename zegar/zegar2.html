@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zegar zwei</title>
+</head>
+
+<body onload="zegar()">
+    <div style="border:1px solid fuchsia; width:60px;" id="czas"></div>
+    <script>
+        function zegar() {
+            data = new Date();
+            let godzina = data.getHours();
+            let minuta = data.getMinutes();
+            let sekunda = data.getSeconds();
+            if (minuta < 10) minuta = "0" + minuta;
+            if (sekunda < 10) sekunda = "0" + sekunda;
+            document.getElementById("czas").innerHTML = `${godzina}:${minuta}:${sekunda}`;
+            setTimeout("zegar()", 1000);
+        }
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

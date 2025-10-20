@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdarzenia myszy</title>
+</head>
+
+<body>
+    <h2>Zdarzenia w JS</h2>
+    <img src="png/e1.png" alt="a" id="zmiana" onmouseOver="zmiana1()" onmouseOut="zmiana2()" onmousedown="zmiana3()"
+        onclick="zmiana4()">
+    <script>
+        function zmiana1() {
+            document.getElementById("zmiana").src = "png/e2.png"
+        }
+        function zmiana2() {
+            document.getElementById("zmiana").src = "png/e3.png"
+        }
+        function zmiana3() {
+            document.getElementById("zmiana").src = "png/e4.png"
+        }
+        function zmiana4() {
+            //document.getElementById("zmiana").src = "png/spiderman.gif"
+            window.location.href = "https://aquaer97.github.io"
+        }
+    </script><br />
+    
+    <hr />
+    <footer>
+        Jakub Gepfert &copy; 2025
+    </footer>
+</body>
+
+</html>

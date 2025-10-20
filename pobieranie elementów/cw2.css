@@ -1,0 +1,45 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	color: antiquewhite;
+	background-color: darkslateblue;
+	font-size: 34px;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.p1,
+.p2 {
+	display: none;
+}
+.show {
+	display: block;
+}
+.square {
+	width: 100px;
+	height: 100px;
+	margin: 20px;
+	background-color: lawngreen;
+}
+button {
+	padding: 20px 40px;
+	margin: 20px;
+	background: none;
+	cursor: pointer;
+	color: lawngreen;
+	font-size: 18px;
+	font-weight: bold;
+	border: 1px solid lawngreen;
+	border-radius: 8px;
+	text-transform: uppercase;
+	transition: 0.3s;
+}
+button:hover {
+	background-color: lawngreen;
+	color: darkslateblue;
+}

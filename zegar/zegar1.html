@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zegar einz</title>
+</head>
+
+<body onload="zegar()">
+
+    <form name="timer">
+        <input type="text" name="czas">
+    </form>
+    <script>
+        function zegar() {
+            let data = new Date();
+            let godzina = data.getHours();
+            let minuta = data.getMinutes();
+            let sekunda = data.getSeconds();
+
+            document.timer.czas.value = `${godzina}:${minuta}:${sekunda}`;
+
+            if (sek < 10) {
+                sek = "0" + sek;
+            }
+            if (min < 10) {
+                min = "0" + min;
+            }
+            if (godz < 10) {
+                godz = "0" + godz;
+            }
+
+            setTimeout("zegar()", 1000);
+        }
+        
+    </script>
+</body>
+
+</html>
