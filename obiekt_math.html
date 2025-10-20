@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematyka dla debili</title>
+    <link href="style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+
+<body>
+    <script>
+        // wartość bezwzględna
+        document.write("Wartość bezwględna z -25: ", Math.abs(-25), "<br/>")
+        // zaokrąglenie w górę do najbliższej liczby całkowitej
+        document.write("2.48 zaokrąglone w górę: ", Math.ceil(2.48), "<br/>")
+        // zaokrąglenie w dół do najbliższej liczby całkowitej
+        document.write("1.95 zaokrąglone w dół: ", Math.floor(1.95), "<br/>")
+        document.write("Metody ceil i floor zaokrąglają do najbliższej liczby całkowitej<br/>")
+        // zaokrąglenie normalne
+        document.write("Zaokrąglenie liczby 2.49: ", Math.round(2.49), "<br/>")
+        //maksimum z x i y
+        document.write(Math.max(7, 12), "<br/>")
+        //minimum z x i y
+        document.write(Math.min(20, 5), "<br/>")
+        //pow(x,y) - x do potęgi y
+        document.write(Math.pow(2, 32), "<br/>")
+        // sqrt(x) pierwiastek kwadratowy
+        document.write(Math.sqrt(64), "<br/>")
+        // cosinus z x (wartości od -1 do 1)
+        document.write("Cosinus z 0.5: ", Math.cos(0.5), "<br/>")
+
+        //Funkcja Math.sqrt z liczbą podaną przez użytkownika
+        let square = prompt("Podaj liczbę do spierwiastkowania: ")
+        document.write("Spierwiastkowana liczba wpisana przez użytkownika: ", Math.sqrt(square))
+
+    </script>
+
+</body>
+
+</html>

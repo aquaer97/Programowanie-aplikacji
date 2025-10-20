@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="font-family: Arial, Helvetica, sans-serif;">
+    <script>
+        /*
+        Funkcja zwykła:
+        function nazwa_funkcji() {
+            kod
+        }
+        
+        Funkcja strzałkowa:
+        const nazwa = (parametry) => {
+            kod
+        }
+        Skrót na szablon funkcji strzałkowej w VSC: nfn
+        */
+
+        function test() {
+            console.log("cześć!!!");
+        }
+
+        test();
+
+        // Wyrażenie funkcyjne
+        // Tworzę zmienną, a nastepnie przypisuję funkcję
+        const hello = function () {
+            console.log("Witaj na stronie");
+        }
+        hello();
+
+        /*
+        Funkcja z argumentami
+        Parametry podajemy podczas tworzenia funkcji 
+        Argumenty podajemy podczas wywołania funkcji
+        */
+        function add(parametr) {
+            console.log(`podany argument to `, parametr);
+        }
+        add("123");
+
+        // Funkcja z dwoma argumentami
+        function add2(x, y) {
+            console.log(x, y);
+            console.log(x + y);
+        }
+
+        /* Gdy wywołasz funkcję bez podania argumentu -> NaN
+        Gdy wywołasz funkcję tylko z jednym argumentem -> również NaN */
+
+        add2(4, 2);
+
+        /* Zwykły użytkownik nie zobaczy wyniku funkcji, gdy korzystam z console.loga!
+        Zamiast console.log warto użyć return (zwracamy wartość, którą potem mogę wykorzystać)
+        Teraz nic nie zobaczymy, ale w konsoli mogę wpisać bądź wywołać funkcję z konkretnymi argumentami 
+        */
+        function add3(x, y) {
+            return x + y;
+        }
+        add3(5, 3)
+
+        function add4(a, b) {
+            return a + b;
+            console.log('czy to sie wyswietla');
+        }
+        add4(1, 1);
+
+        function add5(x, y) {
+            if (x < y) {
+                return;
+            }
+            console.log(x + y);
+        }
+        add5(6, 1)
+
+        // funkcja z dwoma parametrami
+        // ma wypisać w konsoli zdanie "Cześć, mam na imię [imię z parametru] i mam [wiek z parametru]"
+
+        function person(name, age) {
+            console.log(`Cześć, mam na imię ${name} i mam ${age} lat(a).`);
+        }
+        person("Ewa", 33)
+        person("Włodzimierz", 54)
+
+        // funkcja strzałkowa (nfn)
+        // zamiast słowa function mamy strzałkę, gdy funkcja strzałkowa ma tylko jeden parametr, nawiasy () nie są konieczne
+        const test2 = (name) => {
+            console.log(`Mam na imię ${name}.`);
+        }
+        test2('Adam')
+
+        // Ta sama funkcja jak wyżej w dużym uproszczeniu, bez {}
+        const test3 = (name) => console.log(`Mam na imię ${name}`);
+        test3(`Agnieszka`)
+
+        // Strzałkowa z argumentami
+        const test4 = (name, age) => {
+            console.log(`Jestem ${name}, mam ${age} lat.`);
+        }
+        test4('Jola', 19)
+
+        // Strzałkowa z dwoma argumentami
+        const multiply = (num1, num2) => {
+            console.log(`Iloczyn liczb=`);
+            return num1 * num2;
+        }
+
+    </script>
+
+</body>
+
+</html>

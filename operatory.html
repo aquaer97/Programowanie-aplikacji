@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="font-family: Arial, Helvetica, sans-serif;">
+    <script>
+        document.write("<b>Operatory arytmetyczne</b><br/><br/>")
+        let x = 15;
+        let y = 6;
+        let z = x + y;
+        document.write(`Liczba a: ${x}<br/>`)
+        document.write(`Liczba b: ${y}<br/>`)
+        document.write(`Suma liczb wynosi ${z}.<br/>`)
+        document.write(`Reszta z dzielenia: ${x % y}<br/>`)
+        document.write(`Negacja zmiennej y: ${~y}<br/>`)
+        //Operatory porównania oraz operatory logiczne
+        let a = 5;
+        let b = 15;
+        let c = 5;
+        let d = "2";
+        console.log(a > b);
+        //Iloczyn logiczny  i a równe c?
+        console.log(a != b && a === c);
+        //Suma logiczna
+        console.log(a == c || b != c);
+        //Negacja "c"
+        console.log(!c);
+        //"a" nie jest identyczne jak "d"
+        console.log(a !== d);
+        //Operatory przypisania
+        a += 3;
+        console.log(a);
+        //"b" pomniejsz trzykrotnie
+        b /= 3;
+        console.log(b);
+        //Operator inkrementacji (++) i dekrementacji (--)
+        //Inkrementacja przyrostkowa (z opóźnieniem)
+        console.log(a++);
+        console.log(a);
+        //Dekrementacja przedrostkowa (działa od razu)
+        console.log(--b);
+        console.log(b);
+
+        let liczba1 = 2 * 6 - 10;
+        let liczba2 = liczba1 / 2;
+        let liczba3 = 2 * liczba2;
+        let liczba4 = liczba1 + liczba2;
+        let liczba5 = liczba4 % liczba1;
+        console.log(liczba1);
+        console.log(liczba2);
+        console.log(liczba3);
+        console.log(liczba4);
+        console.log(liczba5);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ćwiczenie format etc.</title>
+    <link href="style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+
+<body>
+    <script>
+        /*
+        // wielkie litery, małe, liczba znaków 
+        
+        let name = 'Jakub'
+        document.write(name.toUpperCase() + "<br/>")
+        document.write(name.toLowerCase() + "<br/>")
+        document.write(name.length + "<br/>")
+
+        // bold, blue, czcionka 200
+        let syf = "JavaScript"
+        document.write(syf.bold().fontcolor("blue").fontsize(200) + "<br/>")
+
+        // a=2 b=4 2^2=4
+        let a = '2'
+        let b = '4'
+        document.write(a + a.sup() + "=" + b + "<br/>")
+
+        // kursywa przekreślona maszynowa
+        let nig = "programowanie"
+        document.write(nig.italics().strike().fixed() + "<br/>")
+
+        let = city = prompt("podaj miasto")
+        document.write(city.toUpperCase() + "<br/>" + city.length + "<br/>" + city.bold().fontcolor("green"))
+        
+        
+
+        // wartość bezwzględna
+        console.log(Math.abs(-25));
+        // zaokrąglenie w górę do najbliższej liczby całkowitej
+        console.log(Math.ceil(2.1));
+        // zaokrąglenie w dół do najbliższej liczby całkowitej
+        console.log(Math.floor(6.5));
+        // zaokrąglenie normalne
+        console.log(Math.round(2.5));
+        //maksimum z x i y
+        console.log(Math.max(1, 1.1));
+        //minimum z x i y
+        console.log(Math.min(3, 2.99));
+        //x do potęgi y
+        console.log(Math.pow(3, 2));
+        //pierwiastek kwadratowy
+        console.log(Math.sqrt(900));
+        // cosinus z x (wartości od -1 do 1)
+        console.log(Math.cos(-1));
+
+        //Funkcja Math.sqrt z liczbą podaną przez użytkownika
+
+        //let niger = prompt("liczba do spierwaistkowani:")
+        //console.log(Math.sqrt(niger));
+
+        */
+        data = new Date()
+        // Domyślny format daty
+        console.log(data);
+
+        
+
+        // Dzień miesiąca
+        console.log(data.getDate());
+
+        // numer dnia tygodnia (niedziela = 0 )
+        console.log(data.getDay());
+        // normalny rok
+        console.log(data.getFullYear());
+
+        // sekundy
+        console.log(data.getSeconds());
+        // minuty
+        console.log(data.getMinutes());
+
+        // godzina
+        console.log(data.getHours());
+
+        // pisana godzina, dziwna
+        console.log(data.toGMTString());
+        // DD.MM.RRRR, godziina
+        console.log(data.toLocaleString());
+        // sam czas
+        console.log(data.toLocaleTimeString());
+
+
+
+
+    </script>
+
+</body>
+
+</html>

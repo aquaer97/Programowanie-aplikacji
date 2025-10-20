@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="font-family: Arial, Helvetica, sans-serif;">
+    <h3>JavaScript - wprowadzenie</h3>
+    Instrukcja <b>document.write</b> pozwala wyświetlić coś na stronie <br>
+    <br>
+    <b>console.log</b> pozwala wyświetlić efekt działania w konsoli<br />
+    Komentarz w JS to podwójny slash
+    <h4>Dobre praktyki w JavaScript</h4>
+    <ul>
+        <li>Zmiennym nadawaj angielskie nazwy </li>
+        <li>Wielkość liter ma znaczenie</li>
+        <li>Nazwa nie powinna zaczynać się od wielkiej litery bądź cyfry</li>
+        <li>Przy nazwach dwuczłonowych użyj znaku underscore "_" (również tzw. notacja wielbłądzia
+            każdeSłowoZaczynaSięWielkąLiterą)</li>
+        <li>W nazwach zmiennych nie używaj tzw. słów zarezerwowanych</li>
+        <li>W nazwach zmiennych nie używaj znaków diakrytycznych</li>
+    </ul>
+    <script>
+        document.write("<br>Pierwsze kroki w VSC");
+        console.log("Ten tekst będzie widoczny w konsoli.");
+        //alert("alert");
+        //sube me la radio
+        // zmienne let i const
+        var a = 5;
+        let name = "Jakub"
+        const permanent_name = "Jakub"; // stała zmienna
+        let age = 16;       // zmienna, którą można zmienić
+        console.log(name);
+        console.log(age);
+        // Wyświetlanie na ekranie
+        document.write("<br> Jestem " + name)
+        document.write(" i mam  " + age + " lat")
+        //Nadpisanie zmiennej nową wartością
+        name = "Piotr";
+        console.log(name);
+    </script>
+</body>
+
+</html>

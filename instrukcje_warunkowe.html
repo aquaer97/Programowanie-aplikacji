@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operatory warunkowe</title>
+</head>
+
+<body style="font-family:Arial, Helvetica, sans-serif">
+    <script>
+        let x = prompt("Podaj dowolną liczbę: ");
+        if (x > 0) {
+            document.write("Ta liczba jest dodatnia<br/>");
+        }
+        else if (x < 0) {
+            alert("Ta liczba jest ujemna");
+        }
+        else {
+            alert("Ta liczba jest zerem");
+        }
+        // sprawdza oceny
+        let oc = prompt("Podaj ocenę z ostatniego sprawdzianu (bez plusów i minusów)")
+        if (oc == 6) {
+            document.write("gratuluje jesteś wielki");
+        }     // oc jest większe bądź równe 4 i oc jest mniejsze bądź równe 5
+        else if (oc >= 4 && oc <= 5) {
+            document.write("całkiem ok<br/>");
+        }
+        else if (oc == 3) {
+            document.write("może być, niech ci będzie");
+        }
+        else if (oc >= 1 && oc <= 2) {
+            document.write("jesteś debil, zaiwaniaj na poprawę o 7 rano");
+        }
+        else {
+            document.write("czy ty panimajesz o co cie proszą czy tak nie do końca ciućmoku ty jeden")
+        }
+
+        // switch case
+        let odpowiedz = parseInt(prompt("Kiedy stworzono język JavaScript?"))
+        switch (odpowiedz) {
+            case 1995:
+                alert("gratulacje, dobrze strzeliłeś")
+                break;
+            case 1994:
+                alert("blisko, ale niewystarczająco")
+                break;
+            case 1996:
+                alert("blisko, ale niewystarczająco")
+                break;
+            default:
+                alert("tłumok jesteś i ciućmok")
+                break;
+        }
+        let odpowiedz2 = parseInt(prompt("W którym roku rozpoczęła się II wojna światowa?"))
+        switch (odpowiedz2) {
+            case 1939:
+                alert("swietnie")
+                break;
+            default:
+                alert("debil")
+        }
+
+        /* SKŁADNIA: pętla for
+
+              inicjalizacja          test logiczny           inkrementacja
+        for(wyrażenie początkowe; wyrażenie warunkowe; wyrażenie modyfikujące){
+           blok instrukcji;
+           }
+        */
+
+        for (let i = 1; i <= 50; i++) {
+            document.write("Zastosowanie pętli w JavaScript&nbsp;");
+            i++;
+        }
+    </script>
+
+</body>
+
+</html>

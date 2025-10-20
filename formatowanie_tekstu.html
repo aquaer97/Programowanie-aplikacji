@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatowanie tekstu</title>
+    <link href="style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+
+<body>
+    <script>
+        let text = "Konstantynopolitańczykowianeczka"
+        document.write(text.toUpperCase() + "<br/>")
+        document.write(text.toLowerCase() + "<br/>")
+        document.write("Ilość znaków w zmiennej: " + text.length + "<br/>")
+        document.write("Powiększony tekst" + text.big(), "</br>")
+        document.write("Pogrubiony, powiększony tekst czerwonego koloru: " + text.bold().fontcolor("red").big(), "</br>")
+        document.write("tekst pisany kursywą: " + text.italics().fontsize("100"), "<br/>")
+        document.write("Tekst maszynowy o rozmiarze czcionki 100: " + text.fixed().fontsize("100"), "<br/>")
+        let a = '2'
+        document.write("<br/>Górny indeks dwa" + a.sup())
+        document.write("<br/>Przekreślony maszynowy tekst: " + text.fixed().strike())
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>obiekt Date</title>
+    <link href="style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+
+<body >
+    <script>
+        data = new Date()
+        // Domyślny format daty
+        document.write(data, "<br/>")
+        // Dzień miesiąca
+        document.write(data.getDate(), "<br/>")
+        // numer dnia tygodnia (niedziela = 0 )
+        document.write(data.getDay(), "<br/>")
+        // getYear - rok, działał dobrze tylko do roku 2000
+        document.write(data.getYear(), "<br/>")
+        // normalny rok
+        document.write(data.getFullYear(), "<br/>")
+        // sekundy
+        document.write(data.getSeconds(), "<br/>")
+        // minuty
+        document.write(data.getMinutes(), "<br/>")
+        // godzina
+        document.write(data.getHours(), "<br/>")
+        // pisana godzina, dziwna
+        document.write(data.toGMTString(), "<br/>")
+        // DD.MM.RRRR, godziina
+        document.write(data.toLocaleString(), "<br/>")
+        // sam czas
+        document.write(data.toLocaleTimeString(), "<br/>")
+
+        let rok = data.getFullYear()
+        let mies = (data.getMonth() + 1)
+        let dz = data.getDate()
+
+        if (mies < 10) {
+            mies = "0" + mies
+        }
+
+        document.write(`Dzisiaj jest ${dz}.${mies}.${rok} <br/>`);
+        document.write(`Dzisiaj jest ${dz}-${mies}-${rok} <br/>`);
+        // użycie metody
+        document.write(data.toLocaleDateString(), "<br/>")
+
+        let dni = ["niedziela", "poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota"];
+        document.write(`Dzisiaj jest ${dni[data.getDay()]}, ${data.toLocaleDateString()} <br/>`)
+
+        // Aktualny czas
+        let godz = data.getHours()
+        let min = data.getMinutes()
+
+        if (min < 10) {
+            min = "0" + min
+        }
+
+        document.write(`Aktualny czas: ${godz}:${min} <br/>`)
+        // użycie metody 
+        document.write(data.toLocaleTimeString(), "<br/>")
+
+        document.write(`Dzisiaj jest ${dni[data.getDay()]}, ${dzien} ${mies[data.getMonth()]} ${rok}<br/> <br/>`)
+
+
+    </script>
+
+</body>
+
+</html>

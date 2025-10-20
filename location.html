@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="refresh" content="3; url=http://onet.pl"> -->
+    <title>Location</title>
+</head>
+
+<body>
+    <!-- Strona nie działa, po 3 sekundach zostaniesz przekierowany na inną stronę -->
+    <script>
+        // Automatyczne przekierowanie
+        // window.location.href = "http://zspm.pl";
+        // window.location.replace("http://zspm.pl");
+
+        document.write("Za 30 sekund będziesz przekierowany na inną stronę");
+        setTimeout(function () {
+            window.location.href = "http://zspm.pl";
+        }, 300 0);
+
+    </script>
+</body>
+
+</html>

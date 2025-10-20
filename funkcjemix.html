@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // let godz = prompt("Ile godzin sypiasz?")
+
+        function czasSnu(godz) {
+            if (godz >= 7) {
+                document.write("odpowiednia ilość snu<br/>")
+            }
+            else {
+                document.write("Za mało snu<br/>")
+            }
+        }
+        czasSnu(8)
+
+        document.write('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx <br>')
+
+        // ćwiczenie 2
+
+        let absolute = prompt("podaj liczbe z której obliczymy wartość bezwzględną")
+
+        function bezwgl(absolute) {
+            if (absolute > 0) {
+                return absolute
+            }
+            else {
+                return absolute * (-1)
+            }
+        }
+
+        document.write(bezwgl(absolute))
+
+
+        document.write('<br>xxxxxxxxxxxxxxxxx <br> <br>')
+        //ćwiczenie 3
+        let szer = prompt("podaj szerokość figury")
+        let dlug = prompt("podaj długość figury")
+
+        const poleFigury = (szer, dlug) => {
+            let pole = szer * dlug
+            document.write(`Pole wynosi ${pole}`)
+        }
+        poleFigury(szer, dlug)
+        let dlug2 = prompt("Podaj dlugosc figury")
+
+        const poleFigury2 = (szer, dlug) => {
+            let pole2 = szer2 * dlug2
+            if (szer2 == dlug2) {
+                document.write("Twoja figura jest kwadratem<br/>")
+                document.write(`Pole figury wynosi ${pole2}.`)
+            }
+            else {
+                document.write("Twoja figura to prostokąt<br/>")
+                document.write(`Pole figury wynosi ${pole2}.`)
+            }
+        }
+        poleFigury2(szer2, dlug2)
+
+
+        let Fahr = prompt("Podaj temperaturę w stopniach Fahrenheita:")
+        const naCel = (Fahr) => {
+            let obliczC = (5 / 9) * (Fahr - 32)
+            document.write(`${Fahr} stopni Celsjusza to ${obliczC.toFixed(2)} stopni Celsjusza.`)
+        }
+        naCel(Fahr);
+
+        document.write(`<br>xxxxxxxxxxxxxxxxx <br>`)
+        // I'm thinking Miku, Miku, oo ee oo
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablice</title>
+</head>
+
+<body>
+    <script>
+        // Deklaracja tablicy
+        let tab = [1, 2, 78, 54, -5];
+        // Z użyciem konstruktora new Array oraz [] -> ()
+        let tab2 = new Array('Ola', 'Iza', 'Basia');
+        // Tablica z różnymi typami danych
+        //              0       1     2     3
+        let mix = ["lekcja", 2.75, true, 125];
+        // Odwołanie do wybranego elementu tablicy
+        document.write(tab[2])
+        document.write("<br/>", tab2[0])
+        document.write("<br/>", mix[3], "<br/>")
+
+        // Dodaj nowy element do tab2
+        tab2[6] = "Piotr"
+        document.write(tab2)
+
+        // Wypisz "Ola i Piotr"
+        document.write(`<br/>${tab2[0]} i ${tab2[3]}`)
+
+        // Ilość elementów w tablicy
+        document.write(`Ilość elementów  w tablicy mix: ${mix.length}`)
+
+        // METODY STOSOWANE NA TABLICACH
+        // Push - dodaje na końcu 1 lub więcej elementów
+        mix.push("Nowy element", 454);
+        document.write("<br/>", mix);
+
+        // pop - usuwa ostatni element
+        tab.pop()
+        document.write(`<br/> ${tab}`)
+
+        // slice
+        tab.slice([1]);
+        document.write(`<br/> usuwanie ${tab}`)
+
+        // Join - służy do łączenia
+        const rok = [2, 0, 2, 5];
+        const rok2 = rok.join("")
+        document.write(`<br/>${rok2}`)
+
+        // sort()
+        document.write(`<br/>Przed sortowaniem ${tab2}`)
+        tab2.sort();
+        document.write(`<br/>Posortowane imiona ${tab2}`)
+
+        // Sortowanie liczb z użyciem funkcji
+        function porownaj(a, b) {
+            return a - b;
+        }
+        document.write(`Sortowanie liczb ${tab.sort(porownaj)}`)
+
+        // concat()
+        let zwierzeta = ["Pies", " Kot"]
+        let zwierzeta2 = [" Słoń", " Wieloryb"]
+        let zwierzeta3 = [" Chomik ninja", " Konstantynopolitańczykowianeczka"]
+        let mega_tabela = zwierzeta.concat(zwierzeta2, zwierzeta3);
+        document.write(`<br/>Połączona tablica: ${mega_tabela}`)
+
+        // Reszta pliku pochodzi z pliku Hołdy
+        // pętla forEach - przejdzie przez każdy element tablicy
+
+        const liczby = [0, -5, 147, 97, 50, 96]
+        liczby.forEach((liczba) => {
+            document.write(liczba, " ")
+        })
+
+        document.write(`<br>`)
+
+        // foreach
+        const cars = ['volvo', 'bmw', 'audi', 'ford', 'jeep']
+        cars.forEach((car) => {
+            document.write(car, " ")
+        })
+
+        document.write(`<br>`)
+
+        // metoda map() przekształca tablice wyjściową w nową tablice w której każdy element jest wynikiem wywołania funkcji
+        const liczby2 = [0, 1, 2, 3, 4, 5]
+        // map ma podwoić wartości z powyższej tablicy
+        const podwojone = liczby2.map((liczba) => liczba * 2)
+        document.write("<br>", podwojone)
+        // metoda filter() słuzy do filtrowania tablicy i utworzenia nowej która zawiera tylko elementy spełniające warunek
+
+        const prices = [123, 55.99, 34.29, 77.59, 145.50, 89, 230, 165]
+
+        // chce zwrócić wartości tylko większe od 100
+
+        const morethan100 = prices.filter((price) => price > 100)
+        document.write("<br>", morethan100)
+        document.write("<br>")
+
+        const cars2 = ['volvo', 'bmw', 'audi', 'ford', 'jeep']
+        let ilosc = cars2.length //teraz ma wartość 7
+        for (let i = 0; i < ilosc; i++) {
+            document.write("<li>", cars2[i], "</li>")
+        }
+
+
+    </script>
+</body>
+
+</html>
