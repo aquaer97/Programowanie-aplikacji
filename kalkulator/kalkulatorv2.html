@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+</head>
+
+<body>
+    <h3>Prosty kalkulator</h3>
+    liczba1:&nbsp;<input type="number" id="liczba1"><br /><br />
+    liczba2:&nbsp;<input type="number" id="liczba2"><br /><br />
+    <input type="button" value="Pomnóż" onclick="mnozenie()" class="btn">
+    <input type="button" value="Dodaj" onclick="dodawanie()" class="btn">
+    <input type="button" value="Odejmij" onclick="odejmowanie()" class="btn">
+    <input type="button" value="Podziel" onclick="dzielenie()" class="btn">
+    <br />
+    <p id="wynik"></p>
+</body>
+<script>
+    function mnozenie() {
+        let liczba1 = document.getElementById('liczba1').value;
+        let liczba2 = document.getElementById('liczba2').value;
+        let wynik = document.getElementById('wynik');
+
+        let mnoz = liczba1 * liczba2;
+        wynik.innerHTML = mnoz;
+    }
+    function dodawanie() {
+        let liczba1 = document.getElementById('liczba1').value;
+        let liczba2 = document.getElementById('liczba2').value;
+        let wynik = document.getElementById('wynik');
+
+        let suma = parseInt(liczba1) + Number(liczba2);
+        wynik.innerHTML = suma;
+    }
+    function odejmowanie() {
+        let liczba1 = document.getElementById('liczba1').value;
+        let liczba2 = document.getElementById('liczba2').value;
+        let wynik = document.getElementById('wynik');
+
+        let roznica = parseInt(liczba1) - Number(liczba2);
+        wynik.innerHTML = roznica;
+    }
+    function dzielenie() {
+        let liczba1 = document.getElementById('liczba1').value;
+        let liczba2 = document.getElementById('liczba2').value;
+        let wynik = document.getElementById('wynik');
+
+        if (liczba2 == 0) {
+            document.write("Nie dziel przez zero baranie :P")
+        }
+        else {
+            let iloraz = parseInt(liczba1) / Number(liczba2);
+            wynik.innerHTML = iloraz;
+        }
+    }
+
+
+</script>
+
+</html>
