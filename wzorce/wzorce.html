@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wzorce 1</title>
+</head>
+
+<body>
+    Imię:<br />
+    <input type="text" id="imie" /><br />
+    Nazwisko:<br />
+    <input type="text" id="nazwisko"><br />
+    Email:<br /><input type="text" id="email"><br /><br />
+    <button onclick="sprawdz()">Sprawdź poprawność formularza</button>
+    <input type="reset" value="wyczyść dane">
+    <script>
+        function sprawdz() {
+            let imie = document.getElementById("imie").value;
+            let nazwisko = document.getElementById("nazwisko").value;
+            let email = document.getElementById("email").value;
+
+            let spr_i = /^[a-z]{3,}$/i.exec(imie);
+            let spr_n = /^[a-z]{3,}$/i.exec(nazwisko);
+            let spr_e = /^[a-z0-9\.-_]{3,}@[a-z0-9\.-_]{2,}\.[a-z]{2,4}$/i.exec(email);
+
+            if (spr_i != imie) {
+                alert("Wpisz poprawne imie");
+            }
+            else if (spr_n != nazwisko) {
+                alert("Wpisz poprawne nazwisko")
+            }
+            else if (spr_e != email) {
+                alert("Wpisz poprawny email");
+            }
+            else {
+                alert("Formularz przesłany pomyślnie")
+            }
+        }
+    </script>
+
+</body>
+
+</html>

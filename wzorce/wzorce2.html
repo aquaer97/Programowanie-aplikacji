@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wzorce 2</title>
+</head>
+
+<body>
+    28.10.2025
+    <h3>Uzupełnij dane</h3>
+    <form action="">
+        Nick:&nbsp;<input type="text" id="nick"><br /><br />
+        Numer telefonu:&nbsp;<input type="text" id="tel"><br /><br />
+        <input type="button" value="Prześlij dane" onclick="spr()">
+    </form>
+    <script>
+        function spr() {
+            let nick = document.querySelector('#nick').value;
+            let tel = document.querySelector('#tel').value;
+
+            // Pole nick ma składać się z min. 5 liter i min. 1 cyfry
+            // Numer telefonu to ciąg dziewięciu cyfr bez separatorów
+            let nickWz = /^[a-z]{5,}[0-9]{1,}$/;
+            let telWz = /^[0-9]{9}$/;
+
+            if (!nick.match(nickWz)) {
+                if (!tel.match(telWz)) {
+                    document.write("popraw numer teelfonu")
+                } else {
+                    document.write(`numer telefonu: ${tel}`)
+                }
+                document.write("Popraw nick")
+            }
+            else {
+                document.write(`Nick: ${nick}`)
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
