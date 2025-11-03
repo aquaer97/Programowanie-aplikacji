@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wzorce3</title>
+</head>
+
+<body>
+    <form>
+        login:<br />
+        <input type="text" id="login"><br /><br />
+        hasło:<br />
+        <input type="password" id="password"><br /><br />
+        <input type="button" value="Zaloguj" onclick="logowanie()">
+    </form>
+    <script>
+        function logowanie() {
+            let login = document.querySelector('#login').value;
+            let password = document.querySelector('#password').value;
+
+            let loginWz = /^[A-Z]{1,}[a-z]{4,}[!@#$%]{1,}$/;
+            let passwordWz = /^[a-z]{6,}[0-9]{1,}[!@#$%^&*]{1,}$/
+
+            if (login.match(loginWz)) {
+                if (password.match(passwordWz)) {
+                    document.write("dziala")
+                } else {
+                    console.log(`nie dziala `)
+                }
+
+            }
+            else {
+                console.log(`Twój login nie dziala`);
+            }
+        }
+    </script>
+</body>
+
+</html>
