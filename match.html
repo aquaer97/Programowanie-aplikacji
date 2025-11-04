@@ -23,28 +23,47 @@
         <input type="button" value="wyślij" onclick="spr()">
         <input type="reset" value="wyczyść">
     </form>
-    <script> function spr() {
+    <script>
+        function spr() {
             let nick = document.getElementById('nick').value;
             let tel = document.getElementById('tel').value;
             let k = document.getElementById("k");
             let m = document.getElementById("m");
-            let mail = document.getElementById('mail').value;
+            let mail = document.getElementById('email').value;
             let zgoda = document.getElementById('zgoda');
 
-            // Nick ma zawierać minimum 3 litery i minimum 1 cyfrę (wielkość bez znaczenia)
             let nickWz = /^[a-z]{3,}[0-9]{1,}$/i;
             let telWz = /^[0-9]{3}\s[0-9]{3}\s[0-9]{3}$/;
             let emailWz = /^[a-z0-9\.-_]{3,}@[a-z0-9]{2,}\.[a-z]{2,}$/i;
 
             if (nick.match(nickWz)) {
                 console.log(`nick:${nick}`)
+            } else if (!nick.match(nickWz) && nick != "") {
+                console.log("nieprawidłowy nick :<")
+            } else {
+                console.log("brak nicku")
             }
-            else if (!nick.match(nickWz) && nick != "") {
-                console.log("nie podałeś nicku :<")
+
+            if (tel.match(telWz)) {
+                console.log(`tel:${tel}`);
+            } else if (!tel.match(telWz) && tel != "") {
+                console.log("nieprawidłowy telefon");
+            } else {
+                console.log("brak telefonu");
             }
-            else {
-                console.log("brak")
+            if (mail.match(emailWz)) {
+                console.log(`email:${mail}`);
+            } else {
+                console.log("nieprawidłowy e-mail");
             }
+
+            if (!zgoda.checked) {
+                console.log("nie zaakceptowano regulaminu");
+            }
+
+            if (k.checked) console.log("płeć: kobieta");
+            else if (m.checked) console.log("płeć: mężczyzna");
+            else console.log("nie wybrano płci");
         }
 
     </script>
