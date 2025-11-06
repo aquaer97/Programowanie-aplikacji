@@ -4,32 +4,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formularz</title>
+    <title>Blok wschodni</title>
 </head>
+<style>
+    body,
+    html {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    ul,
+    li {
+        list-style: none;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 20px;
+    }
+
+    h3 {
+        margin-top: 20px;
+        margin-bottom: 5px;
+
+    }
+
+    h4 {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .car-label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .car-label img {
+        width: 100px;
+        height: auto;
+        /* border: 1px solid #ddd;
+        border-radius: 4px; */
+        
+        vertical-align: middle;
+    }
+
+    .car-label input[type="radio"] {
+        margin: 0;
+    }
+</style>
 
 <body>
     <form action="">
         <h2>Wybierz swój ulubiony samochód z bloku wschodniego</h2>
-        <h3>Związek Radziecki (ZSRR)</h3>
-        <h4>LADA (Лада)</h4>
-        <input type="radio" name="lada" id="Lada2101">LADA 2101 "Żiguli" <br>
-        <input type="radio" name="lada" id="lada2107">LADA 2107 <br>
-        <input type="radio" name="lada" id="lada2109">LADA Samara (2109) <br>
-        <h4>GAZ (ГАЗ, Горьковский автомобильный завод)</h4>
-        <input type="radio" name="gaz" id="gazm20">GAZ-M20 Pobieda <br>
-        <input type="radio" name="gaz" id="gaz21">GAZ-21 Wołga <br>
-        <input type="radio" name="gaz" id="gaz24">GAZ-24 Wołga <br>
-        <h4>UAZ (УАЗ, Ульяновский автомобильный завод)</h4>
-        <input type="radio" name="uaz" id="uaz469">UAZ-469 <br>
-        <input type="radio" name="uaz" id="uaz450">UAZ-450 "Buchanka" <br>
-        <input type="radio" name="uaz" id="uaz3160">UAZ-3160 <br>
-        <h3>Niemiecka Republika Demokratyczna (DDR)</h3>
-        <h4>Trabant</h4>
-        <input type="radio" name="trabant" id="t601">Trabant 601
 
+        <ul>
+            <h3>Związek Radziecki (ZSRR)</h3>
+            <ul>
+                <h4>LADA (Лада)</h4>
+                <ul>
+                    <li>
+                        <label for="lada2107" class="car-label">
+                            <input type="radio" name="car" id="lada2107">
+                            <img src="waz2107.jpg" alt="w2107">
+                            LADA 2107
+                        </label>
+                    </li>
+                    <li><input type="radio" name="car" id="lada2121"><label for="lada2121">LADA Niva (2121)</label></li>
+                    <li><input type="radio" name="car" id="lada2109"><label for="lada2109">LADA Samara (2109)</label>
+                    </li>
+                </ul>
+                <h4>GAZ (ГАЗ, Горьковский автомобильный завод)</h4>
+                <ul>
+                    <li><input type="radio" name="car" id="gazm20"><label for="gazm20">GAZ-M20 Pobieda </label></li>
+                    <li><input type="radio" name="car" id="gaz21"><label for="gaz21">GAZ-21 Wołga</label></li>
+                    <li><input type="radio" name="car" id="gaz14"><label for="gaz14">GAZ-14 Czajka</label></li>
+                </ul>
+                <h4>UAZ (УАЗ, Ульяновский автомобильный завод)</h4>
+                <ul>
+                    <li><input type="radio" name="car" id="uaz469"><label for="uaz469">UAZ-469</label></li>
+                    <li><input type="radio" name="car" id="uaz452"><label for="uaz452">UAZ-452 "Buchanka"</label></li>
+                    <li><input type="radio" name="car" id="uaz3160"><label for="uaz3160">UAZ-3160</label></li>
+                </ul>
+            </ul>
 
+            <h3>Niemiecka Republika Demokratyczna (DDR)</h3>
+            <ul>
+                <h4>Trabant - VEB Sachsenring Automobilwerke Zwickau</h4>
+                <ul>
+                    <li><input type="radio" name="car" id="p50"><label for="p50">Trabant P50</label></li>
+                    <li><input type="radio" name="car" id="p60"><label for="p60">Trabant P60</label></li>
+                    <li><input type="radio" name="car" id="t601"><label for="t601">Trabant 601</label></li>
+                </ul>
+                <h4>Wartburg - VEB Automobilwerk Eisenach</h4>
+                <ul>
+                    <li><input type="radio" name="car" id="w311"><label for="w311">Wartburg 311</label></li>
+                    <li><input type="radio" name="car" id="w353"><label for="w353">Wartburg 353</label></li>
+                    <li><input type="radio" name="car" id="w13"><label for="w13">Wartburg 1.3</label></li>
+                </ul>
+            </ul>
+
+            <h3>Polska Rzeczpospolita Ludowa (PRL)</h3>
+            <ul>
+                <h4>FSO (Fabryka Samochodów Osobowych)</h4>
+                <ul>
+                    <li><input type="radio" name="car" id="fso125p"><label for="fso125p">Polski Fiat 125p ("Duży
+                            Fiat")</label></li>
+                    <li><input type="radio" name="car" id="fsoPolonez"><label for="fsoPolonez">FSO Polonez</label></li>
+                    <li><input type="radio" name="car" id="fsoWarszawa"><label for="fsoWarszawa">FSO Warszawa
+                            (M20/223)</label></li>
+                </ul>
+                <h4>FSM (Fabryka Samochodów Małolitrażowych)</h4>
+                <ul>
+                    <li><input type="radio" name="car" id="fsm126p"><label for="fsm126p">Polski Fiat 126p
+                            ("Maluch")</label></li>
+                    <li><input type="radio" name="car" id="fsmSyrena"><label for="fsmSyrena">FSM Syrena 105</label></li>
+                </ul>
+            </ul>
+
+            <h3>Czechosłowacja (ČSSR)</h3>
+            <ul>
+                <h4>Škoda (AZNP)</h4>
+                <ul>
+                    <li><input type="radio" name="car" id="skodaMB"><label for="skodaMB">Škoda 1000 MB</label></li>
+                    <li><input type="radio" name="car" id="skoda120"><label for="skoda120">Škoda 120 (Seria 742)</label>
+                    </li>
+                    <li><input type="radio" name="car" id="skodaFavorit"><label for="skodaFavorit">Škoda Favorit</label>
+                    </li>
+                </ul>
+                <h4>Tatra (Tatra Kopřivnice)</h4>
+                <ul>
+                    <li><input type="radio" name="car" id="tatra603"><label for="tatra603">Tatra 603</label></li>
+                </ul>
+            </ul>
+
+            <h3>Rumunia</h3>
+            <ul>
+                <h4>Dacia (Uzina de Autoturisme Pitești)</h4>
+                <ul>
+                    <li><input type="radio" name="car" id="dacia1300"><label for="dacia1300">Dacia 1300</label></li>
+                    <li><input type="radio" name="car" id="dacia1310"><label for="dacia1310">Dacia 1310
+                            (zmodernizowana)</label></li>
+                </ul>
+                <h4>ARO (Auto România)</h4>
+                <ul>
+                    <li><input type="radio" name="car" id="aro24"><label for="aro24">ARO 24</label></li>
+                    <li><input type="radio" name="car" id="aroM461"><label for="aroM461">ARO M461</label></li>
+                </ul>
+            </ul>
+
+            <h3>Jugosławia (SFRJ)</h3>
+            <ul>
+                <h4>Zastava (Zavodi Crvena Zastava)</h4>
+                <ul>
+                    <li><input type="radio" name="car" id="zastava750"><label for="zastava750">Zastava 750
+                            ("Fico")</label></li>
+                    <li><input type="radio" name="car" id="zastava101"><label for="zastava101">Zastava 101 /
+                            Skala</label></li>
+                    <li><input type="radio" name="car" id="zastavaYugo"><label for="zastavaYugo">Zastava Yugo
+                            (Koral)</label></li>
+                </ul>
+            </ul>
+        </ul>
         <h2>Galeria samochodów</h2>
-         <img src="waz2101.JPG" alt="waz2101" width="250px"><br>Lada 2101
+        <img src="waz2101.JPG" alt="waz2101" width="250px"><br>Lada 2101
     </form>
 </body>
 
