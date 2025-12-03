@@ -18,7 +18,7 @@
     }
 
     #postaci {
-        padding: 50px 50px 50px 20px;
+        padding: 20px 50px 50px 20px;
         display: flex;
     }
 
@@ -35,43 +35,114 @@
         font-size: large;
         background-color: rgba(226, 218, 218, 0.295);
     }
+
+    #wszystko {
+        display: none;
+    }
+
+    #wszystko2 {
+        display: none;
+    }
 </style>
 
 <body>
     <div id="tytul">
         <h1>Postaci z Red Dead Redemption 2</h1>
     </div>
-    <div id="postaci">
-        <figure><img src="assets/arthurmorgan.jpg" alt="arthur-morgan">
-            <figcaption>Arthur Morgan</figcaption>
-        </figure>
-        <figure><img src="assets/johnmarston.jpg" alt="john-marston">
-            <figcaption>John Marston</figcaption>
-        </figure>
-        <figure><img src="assets/dutch.jpg" alt="dutch">
-            <figcaption>Dutch van der Linde</figcaption>
-        </figure>
-        <figure><img src="assets/abigail.jpg" alt="abigail">
-            <figcaption>Abigail Roberts</figcaption>
-        </figure>
-        <figure><img src="assets/bill.jpg" alt="bill">
-            <figcaption>Bill Williamson</figcaption>
-        </figure>
-        <figure><img src="assets/charles.jpg" alt="charles">
-            <figcaption>Charles Smith</figcaption>
-        </figure>
+    <div id="wszystko">
+        <div id="postaci">
+            <figure><img src="assets/arthurmorgan.jpg" alt="arthur-morgan" id="obraz">
+                <figcaption>Arthur Morgan</figcaption>
+            </figure>
+            <figure><img src="assets/johnmarston.jpg" alt="john-marston">
+                <figcaption>John Marston</figcaption>
+            </figure>
+            <figure><img src="assets/dutch.jpg" alt="dutch">
+                <figcaption>Dutch van der Linde</figcaption>
+            </figure>
+            <figure><img src="assets/abigail.jpg" alt="abigail">
+                <figcaption>Abigail Roberts</figcaption>
+            </figure>
+            <figure><img src="assets/bill.jpg" alt="bill">
+                <figcaption>Bill Williamson</figcaption>
+            </figure>
+            <figure><img src="assets/charles.jpg" alt="charles">
+                <figcaption>Charles Smith</figcaption>
+            </figure>
+        </div>
+        <div id="postaci">
+            <figure><img src="assets/hosea.jpg" alt="hosea">
+                <figcaption>Hosea Matthews</figcaption>
+            </figure>
+            <figure><img src="assets/javier.jpg" alt="javier">
+                <figcaption>Javier Escuella</figcaption>
+            </figure>
+            <figure><img src="assets/trelawny.jpg" alt="trelawny">
+                <figcaption>Josiah Trelawny</figcaption>
+            </figure>
+            <figure><img src="assets/karen.jpg" alt="karen">
+                <figcaption>Karen Jones</figcaption>
+            </figure>
+            <figure><img src="assets/marybeth.jpg" alt="marybeth">
+                <figcaption>Mary-Beth Gaskill</figcaption>
+            </figure>
+            <figure><img src="assets/micah.jpg" alt="micah">
+                <figcaption>Micah Bell</figcaption>
+            </figure>
+        </div>
     </div>
-    <div id="postaci">
-        <figure><img src="assets/hosea.jpg" alt="hosea">
-            <figcaption>Hosea Matthews</figcaption>
-        </figure>
+    <div id="wszystko2">
+        <div id="postaci">
+            <figure><img src="assets/sean.jpg" alt="sean" id="obraz">
+                <figcaption>Sean MacGuire</figcaption>
+            </figure>
+            <figure><img src="assets/johnmarston.jpg" alt="john-marston">
+                <figcaption>John Marston</figcaption>
+            </figure>
+            <figure><img src="assets/dutch.jpg" alt="dutch">
+                <figcaption>Dutch van der Linde</figcaption>
+            </figure>
+            <figure><img src="assets/abigail.jpg" alt="abigail">
+                <figcaption>Abigail Roberts</figcaption>
+            </figure>
+            <figure><img src="assets/bill.jpg" alt="bill">
+                <figcaption>Bill Williamson</figcaption>
+            </figure>
+            <figure><img src="assets/charles.jpg" alt="charles">
+                <figcaption>Charles Smith</figcaption>
+            </figure>
+        </div>
+        <div id="postaci">
+            <figure><img src="assets/hosea.jpg" alt="hosea">
+                <figcaption>Hosea Matthews</figcaption>
+            </figure>
+            <figure><img src="assets/javier.jpg" alt="javier">
+                <figcaption>Javier Escuella</figcaption>
+            </figure>
+            <figure><img src="assets/trelawny.jpg" alt="trelawny">
+                <figcaption>Josiah Trelawny</figcaption>
+            </figure>
+            <figure><img src="assets/karen.jpg" alt="karen">
+                <figcaption>Karen Jones</figcaption>
+            </figure>
+            <figure><img src="assets/marybeth.jpg" alt="marybeth">
+                <figcaption>Mary-Beth Gaskill</figcaption>
+            </figure>
+            <figure><img src="assets/micah.jpg" alt="micah">
+                <figcaption>Micah Bell</figcaption>
+            </figure>
+        </div>
     </div>
-
     </div>
     <script>
         $('#tytul').delay(0).animate({
             marginLeft: '75%'
         }, 2500)
+        $('#wszystko').delay(3000).fadeIn(1000)
+        $('#wszystko').delay(6000).fadeOut(1000)
+        $('#wszystko2').delay(16000).fadeIn(1000)
+        $('#wszystko2').delay(23000).fadeOut(1000)
+
     </script>
 </body>
 
