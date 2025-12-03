@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        Imie: <input type="text" id="imie" placeholder="wprowadz imie"> <br>
+        Wiek: <input type="number" id="wiek" placeholder="wprowadz wiek"><br>
+        <button type="button" onclick="validate()">sprawdz</button>
+        <br>
+        <hr><br>
+        zadanie 2 <br>
+        nick <input type="text" id="nick" placeholder="wprowadz nick"> <br>
+        kod pocztowy <input type="text" id="code" placeholder="00-000"> <br>
+        <button type="button" onclick="val()">zarejestruj</button>
+    </form>
+    <script>
+        function validate() {
+            let name = document.getElementById("imie").value;
+            let age = document.getElementById("wiek").value;
+            let namewz = /^[a-zA-Z]{2,}$/
+            let agewz = /^[0-9]{2}$/
+
+            if (name.match(namewz) && age.match(agewz)) {
+                alert("poprawne dane")
+            } else {
+                alert("popraw dane")
+            }
+        }
+
+        // zasanie 2
+        function val() {
+            let nick = document.getElementById("nick").value;
+            let code = document.getElementById("code").value;
+            let nickwz = /^[a-zA-Z]{4,}$/
+            let codewz = /^[0-9]{2}[-]{1}[0-9]{3}$/
+
+            if (!nick.match(nickwz)) {
+                alert("popraw nick")
+            }
+            else if (!code.match(codewz)) {
+                alert("popraw kod")
+            }
+            else {
+                alert("wszystko ok")
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -44,12 +44,16 @@
         height: auto;
         /* border: 1px solid #ddd;
         border-radius: 4px; */
-        
+
         vertical-align: middle;
     }
 
     .car-label input[type="radio"] {
         margin: 0;
+    }
+
+    li {
+        margin-bottom: 5px;
     }
 </style>
 
@@ -58,7 +62,7 @@
         <h2>Wybierz swój ulubiony samochód z bloku wschodniego</h2>
 
         <ul>
-            <h3>Związek Radziecki (ZSRR)</h3>
+            <h3><img src="zsrr.png" alt="zsrr" width="28px">Związek Radziecki (ZSRR)</h3>
             <ul>
                 <h4>LADA (Лада)</h4>
                 <ul>
@@ -69,8 +73,10 @@
                             LADA 2107
                         </label>
                     </li>
-                    <li><input type="radio" name="car" id="lada2121"><label for="lada2121">LADA Niva (2121)</label></li>
-                    <li><input type="radio" name="car" id="lada2109"><label for="lada2109">LADA Samara (2109)</label>
+                    <li><label for="lada2121" class="car-label"><input type="radio" name="car" id="lada2121"><img
+                                src="lada2121.jpg" alt="w2121">LADA Niva (2121)</label></li>
+                    <li><label for="lada2109" class="car-label"><input type="radio" name="car" id="lada2109"><img
+                                src="waz2109.jpeg" alt="samara">LADA Samara (2109)</label>
                     </li>
                 </ul>
                 <h4>GAZ (ГАЗ, Горьковский автомобильный завод)</h4>

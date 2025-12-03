@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cw2</title>
+    <script src="./jquery.js"></script>
+</head>
+
+<body>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo rerum ad cupiditate consectetur pariatur sunt
+        vitae eveniet modi esse odit, ipsa nam qui, eligendi eos quae, tenetur sit totam soluta reprehenderit minima
+        voluptate dicta dignissimos et? Aut amet ratione saepe neque, expedita, facilis quis id perspiciatis nesciunt
+        soluta hic repudiandae.</span> <br>
+    <button id="bt1">ukryj</button>
+    <button id="bt2">pokaż</button>
+    <script>
+        // kliknięcie przycisku ma wywołać zanikanie tekstu
+        function ukryj() {
+            $('span').fadeOut('slow')
+        }
+        function pokaz() {
+            $('span').fadeIn('fast')
+        }
+
+        $('#bt1').click(ukryj)
+        $('#bt2').click(pokaz)
+
+    </script>
+</body>
+
+</html>

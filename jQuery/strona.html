@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona jQuery</title>
+    <script src="./jquery.js"></script>
+</head>
+<style>
+    body {
+        background-image: url(assets/background.jpeg);
+    }
+
+    #tytul {
+        text-align: center;
+        font-family: 'Calibri';
+    }
+
+    #postaci {
+        padding: 50px 50px 50px 20px;
+        display: flex;
+    }
+
+    #postaci img {
+        border: 5px solid black;
+        height: 300px;
+        width: 220px;
+    }
+
+    figcaption {
+        font-family: Calibri;
+        font-weight: bold;
+        text-align: center;
+        font-size: large;
+        background-color: rgba(226, 218, 218, 0.295);
+    }
+</style>
+
+<body>
+    <div id="tytul">
+        <h1>Postaci z Red Dead Redemption 2</h1>
+    </div>
+    <div id="postaci">
+        <figure><img src="assets/arthurmorgan.jpg" alt="arthur-morgan">
+            <figcaption>Arthur Morgan</figcaption>
+        </figure>
+        <figure><img src="assets/johnmarston.jpg" alt="john-marston">
+            <figcaption>John Marston</figcaption>
+        </figure>
+        <figure><img src="assets/dutch.jpg" alt="dutch">
+            <figcaption>Dutch van der Linde</figcaption>
+        </figure>
+        <figure><img src="assets/abigail.jpg" alt="abigail">
+            <figcaption>Abigail Roberts</figcaption>
+        </figure>
+        <figure><img src="assets/bill.jpg" alt="bill">
+            <figcaption>Bill Williamson</figcaption>
+        </figure>
+        <figure><img src="assets/charles.jpg" alt="charles">
+            <figcaption>Charles Smith</figcaption>
+        </figure>
+    </div>
+    <div id="postaci">
+        <figure><img src="assets/hosea.jpg" alt="hosea">
+            <figcaption>Hosea Matthews</figcaption>
+        </figure>
+    </div>
+
+    </div>
+    <script>
+        $('#tytul').delay(0).animate({
+            marginLeft: '75%'
+        }, 2500)
+    </script>
+</body>
+
+
+</html>

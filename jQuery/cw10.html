@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cw9</title>
+    <script src="./jquery.js"></script>
+    <style>
+        #kwadrat {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border: 1px solid brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="kwadrat">KWADRAT</div>
+    <script>
+        $('#kwadrat').css({ backgroundColor: 'blue', color: 'white' })
+        $('#kwadrat').delay(3000).animate({
+            marginLeft: '40%',
+            width: '200px',
+            height: '200px',
+        }, 2500)
+        $('#kwadrat').delay(3000).animate({
+            marginTop: '35%',
+            width: '150px',
+            height: '150px'
+
+        }, 2500)
+        $('#kwadrat').delay(3000).animate({
+            marginLeft: '70%',
+            marginTop: '70%',
+            width: '250px',
+            height: '250px',
+        }, 2500)
+        $('#kwadrat').delay(3000).animate({
+            marginLeft: '5%',
+            marginTop: '5%',
+            width: '300px',
+            height: '300px'
+        }, 2500)
+    </script>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cw9</title>
+    <script src="./jquery.js"></script>
+    <style>
+        #kwadrat {
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255, 0, 0, 0.9);
+            border: 1px solid brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="kwadrat"></div>
+    <br><button id="lewo">lewo</button>&nbsp;<button id="stop">stop</button>&nbsp;<button id="prawo">prawo</button>
+    <script>
+
+        function lewo() {
+            $('#kwadrat').animate({ marginLeft: "-8%" }, 3000)
+        }
+        $('#lewo').click(lewo)
+
+        function stop() {
+            $('#kwadrat').stop()
+        }
+        $('#stop').click(stop)
+
+        function prawo() {
+            $('#kwadrat').animate({ marginLeft: "98%" }, 3000)
+        }
+        $('#prawo').click(prawo)
+    </script>
+
+</html>
