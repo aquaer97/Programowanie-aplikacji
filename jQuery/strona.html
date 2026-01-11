@@ -26,6 +26,11 @@
         border: 5px solid black;
         height: 300px;
         width: 220px;
+        transition: transform .2s;
+    }
+
+    #postaci img:hover {
+        transform: scale(1.2)
     }
 
     figcaption {
@@ -46,8 +51,8 @@
 </style>
 
 <body>
-    <div id="tytul">
-        <h1>Postaci z Red Dead Redemption 2</h1>
+    <div><button id="prev">strona 1</button>&nbsp;<button id="next">strona 2</button>
+        <h1 id="tytul">Postaci z Red Dead Redemption 2</h1>
     </div>
     <div id="wszystko">
         <div id="postaci">
@@ -131,17 +136,29 @@
             <figure><img src="assets/micah.jpg" alt="micah">
                 <figcaption>Micah Bell</figcaption>
             </figure>
+
         </div>
+
     </div>
+
+
     </div>
     <script>
         $('#tytul').delay(0).animate({
             marginLeft: '75%'
-        }, 2500)
-        $('#wszystko').delay(3000).fadeIn(1000)
-        $('#wszystko').delay(6000).fadeOut(1000)
-        $('#wszystko2').delay(16000).fadeIn(1000)
-        $('#wszystko2').delay(23000).fadeOut(1000)
+        }, 2000)
+
+        function prev() {
+            $('#wszystko2').delay(1000).fadeOut(500)
+            $('#wszystko').delay(2000).fadeIn(500)
+        }
+        $('#prev').click(prev)
+        function next() {
+            $('#wszystko').delay(1000).fadeOut(500)
+            $('#wszystko2').delay(2000).fadeIn(500)
+
+        }
+        $('#next').click(next)
 
     </script>
 </body>
