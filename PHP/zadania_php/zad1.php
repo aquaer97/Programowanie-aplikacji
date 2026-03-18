@@ -15,13 +15,11 @@ echo "<br> Apostrofy są 'silniejsze' niż cudzysłowy <br> <br>";
 
 $imie="anna";
 
-echo "<br><img src='php.png' <br>";
-
-echo '<br>witaj $imie <br>';
+echo '<br>witaj $imie <br>'; // wyświetli: witaj $imie
 echo "<br>";
-echo "witaj $imie <br>";
+echo "witaj $imie <br>"; // wyświetli: witaj anna
 
-echo "<br> znak kropki kropki to konkatenacja łańcuchów znakowych <br> <br>";
+echo "<br> znak kropki to konkatenacja łańcuchów znakowych <br> <br>";
 
 $im1='kasia';
 $im2 = 'filip';
