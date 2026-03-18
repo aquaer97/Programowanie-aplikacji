@@ -3,4 +3,5 @@
 // Plik zawiera funkcję wyświetlającą łańcuch znaków @@@.## $$$
 echo "Oto zawartość pliku zewnętrznego zawierającego funkcję wczytującą łańcuch znaków:";
 include('include_zewn.php');
+echo "Koniec skryptu.";
 ?>
